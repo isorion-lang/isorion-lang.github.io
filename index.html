@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isorion - Universal Infrastructure Compiler. Write .isor once, deploy to 13+ targets including Docker, Kubernetes, Terraform, AWS, Azure, GCP, and more.">
+    <meta name="keywords" content="infrastructure as code, IaC, compiler, multi-cloud, Docker, Kubernetes, Terraform, DevOps">
+    <meta name="author" content="Isorion Project">
+    <title>Isorion - Universal Infrastructure Compiler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span class="logo-icon">🌍</span>
+                <span class="logo-text">Isorion</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#targets">Targets</a>
+                <a href="#docs">Docs</a>
+                <a href="https://github.com/isorion-lang/isorion" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Universal Infrastructure Compiler</h1>
+                <p class="hero-subtitle">Write infrastructure once in <code>.isor</code>, deploy to <strong>13+ targets</strong></p>
+                <p class="hero-description">Docker, Kubernetes, Terraform, AWS, Azure, GCP, Ansible, Helm, and more—all from a single declarative source.</p>
+                
+                <div class="hero-buttons">
+                    <a href="https://github.com/isorion-lang/isorion/releases" class="btn btn-primary">
+                        Download v1.0
+                    </a>
+                    <a href="https://github.com/isorion-lang/isorion" class="btn btn-secondary">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <div class="hero-code">
+                    <div class="code-header">
+                        <span>app.isor</span>
+                        <span class="code-lang">YAML++</span>
+                    </div>
+                    <pre><code>version: "1.0"
+variables:
+  $env: "production"
+
+services:
+  api:
+    image: "nginx:1.25"
+    
+    @if $env == "production":
+      replicas: 5
+    @else:
+      replicas: 1</code></pre>
+                </div>
+
+                <div class="compile-arrows">
+                    <div class="arrow">↓</div>
+                    <p>Compile to any target</p>
+                </div>
+
+                <div class="targets-preview">
+                    <span class="target-badge">Docker Compose</span>
+                    <span class="target-badge">Kubernetes</span>
+                    <span class="target-badge">Terraform</span>
+                    <span class="target-badge">AWS CloudFormation</span>
+                    <span class="target-badge">+ 9 more</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Isorion?</h2>
+            <p class="section-subtitle">Stop rewriting infrastructure for every platform</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>13+ Target Platforms</h3>
+                    <p>One .isor file compiles to Docker, Kubernetes, Terraform, AWS, Azure, GCP, Ansible, Helm, CloudFormation, and more.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔓</div>
+                    <h3>Zero Vendor Lock-in</h3>
+                    <p>Migrate between clouds or orchestrators without rewriting infrastructure. Switch from Docker to K8s in seconds.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>YAML++ Syntax</h3>
+                    <p>Familiar YAML with variables, conditionals, loops, and functions. Easy to learn, powerful to use.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Production Ready</h3>
+                    <p>Complete type checking, validation, and error reporting. Battle-tested compiler with 100% YAML compatibility.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3>Apache 2.0 License</h3>
+                    <p>Truly open-source. Use freely in commercial projects with patent protection and no restrictions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Multi-Cloud Ready</h3>
+                    <p>89% of enterprises use multi-cloud. Isorion makes it easy with portable infrastructure code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="targets" class="targets">
+        <div class="container">
+            <h2>Supported Targets</h2>
+            <p class="section-subtitle">Compile to any platform from one source</p>
+
+            <div class="targets-grid">
+                <div class="target-item">
+                    <div class="target-name">Docker Compose</div>
+                    <div class="target-status">✅ Free</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">Kubernetes</div>
+                    <div class="target-status">✅ Free</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">Generic YAML</div>
+                    <div class="target-status">✅ Free</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">Ansible</div>
+                    <div class="target-status">✅ Free</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">Terraform</div>
+                    <div class="target-status">💎 Pro</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">AWS CloudFormation</div>
+                    <div class="target-status">💎 Pro</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">Azure ARM</div>
+                    <div class="target-status">💎 Pro</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">Google Cloud Deployment</div>
+                    <div class="target-status">💎 Pro</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">Helm Charts</div>
+                    <div class="target-status">💎 Pro</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">HubOrion Runtime</div>
+                    <div class="target-status">✅ Free</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">Reverse Compiler</div>
+                    <div class="target-status">💎 Pro</div>
+                </div>
+                <div class="target-item">
+                    <div class="target-name">More coming...</div>
+                    <div class="target-status">🔜 Soon</div>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p><strong>Free Community Edition:</strong> Docker, Kubernetes, YAML, Ansible + HubOrion</p>
+                <p><strong>Pro Edition:</strong> Terraform, Cloud providers (AWS, Azure, GCP), Helm, and more</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="install">
+        <div class="container">
+            <h2>Get Started</h2>
+            
+            <div class="install-grid">
+                <div class="install-method">
+                    <h3>Via Go Install</h3>
+                    <div class="code-block">
+                        <code>go install github.com/isorion-lang/isorion/cmd/isorion@latest</code>
+                    </div>
+                </div>
+
+                <div class="install-method">
+                    <h3>Via Binary</h3>
+                    <p>Download from <a href="https://github.com/isorion-lang/isorion/releases">GitHub Releases</a></p>
+                    <div class="code-block">
+                        <code>isorion fusion app.isor -t docker-compose</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-example">
+                <h3>Quick Example</h3>
+                <div class="example-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Write your infrastructure</h4>
+                            <div class="code-block">
+                                <code>isorion fusion my-app.isor</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Choose your target</h4>
+                            <div class="code-block">
+                                <code>isorion fusion app.isor --target kubernetes</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Deploy anywhere</h4>
+                            <div class="code-block">
+                                <code>kubectl apply -f output/</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="docs" class="docs-section">
+        <div class="container">
+            <h2>Documentation</h2>
+            <div class="docs-grid">
+                <a href="https://github.com/isorion-lang/isorion/blob/main/README.md" class="doc-card">
+                    <h3>📖 Getting Started</h3>
+                    <p>Installation, first steps, and basic concepts</p>
+                </a>
+                <a href="https://github.com/isorion-lang/isorion/tree/main/docs" class="doc-card">
+                    <h3>📚 Language Reference</h3>
+                    <p>Complete YAML++ syntax and directives</p>
+                </a>
+                <a href="https://github.com/isorion-lang/isorion/tree/main/examples" class="doc-card">
+                    <h3>💡 Examples</h3>
+                    <p>Real-world infrastructure examples</p>
+                </a>
+                <a href="https://github.com/isorion-lang/isorion/blob/main/CONTRIBUTING.md" class="doc-card">
+                    <h3>🤝 Contributing</h3>
+                    <p>Join the community and contribute</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="community">
+        <div class="container">
+            <h2>Join the Community</h2>
+            <p class="section-subtitle">Open-source and built for the future</p>
+            
+            <div class="community-stats">
+                <div class="stat">
+                    <div class="stat-value">13+</div>
+                    <div class="stat-label">Target Platforms</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">Apache 2.0</div>
+                    <div class="stat-label">License</div>
+                </div>
+            </div>
+
+            <div class="community-links">
+                <a href="https://github.com/isorion-lang/isorion" class="community-link">
+                    <span class="link-icon">⭐</span>
+                    <span>Star on GitHub</span>
+                </a>
+                <a href="https://github.com/isorion-lang/isorion/issues" class="community-link">
+                    <span class="link-icon">🐛</span>
+                    <span>Report Issues</span>
+                </a>
+                <a href="https://github.com/isorion-lang/isorion/discussions" class="community-link">
+                    <span class="link-icon">💬</span>
+                    <span>Discussions</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🌍</span>
+                        <span class="logo-text">Isorion</span>
+                    </div>
+                    <p>Universal Infrastructure Compiler</p>
+                    <p class="footer-tagline">Write once, deploy everywhere</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Project</h4>
+                        <a href="https://github.com/isorion-lang/isorion">GitHub</a>
+                        <a href="https://github.com/isorion-lang/isorion/releases">Releases</a>
+                        <a href="https://github.com/isorion-lang/isorion/blob/main/CHANGELOG.md">Changelog</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Documentation</h4>
+                        <a href="https://github.com/isorion-lang/isorion/blob/main/README.md">Getting Started</a>
+                        <a href="https://github.com/isorion-lang/isorion/tree/main/docs">Docs</a>
+                        <a href="https://github.com/isorion-lang/isorion/tree/main/examples">Examples</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Community</h4>
+                        <a href="https://github.com/isorion-lang/isorion/issues">Issues</a>
+                        <a href="https://github.com/isorion-lang/isorion/discussions">Discussions</a>
+                        <a href="https://github.com/isorion-lang/isorion/blob/main/CONTRIBUTING.md">Contributing</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="https://github.com/isorion-lang/isorion/blob/main/LICENSE">Apache 2.0 License</a>
+                        <a href="https://github.com/isorion-lang/isorion/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+                        <a href="https://github.com/isorion-lang/isorion/blob/main/SECURITY.md">Security</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024-2025 OFONTAINES | Licensed under Apache License 2.0</p>
+                <p>Built with ❤️ for the multi-cloud future</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
