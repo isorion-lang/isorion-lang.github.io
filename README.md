@@ -41,4 +41,4 @@ Open `index.html` in browser to preview locally.
 
 ## License
 
-© 2024-2025 OFONTAINES | Apache License 2.0
+© 2025-2026 Groupe ofontaines | Apache License 2.0
